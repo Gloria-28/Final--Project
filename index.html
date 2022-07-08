@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="cotainer">
+        <div class="weather-app-wrapper">
+
+            <div class="weather-app">
+                <form id="search-form">
+                    <div class="row">
+                        <div class="col-9">
+
+                            <input type="search" placeholder="Type a city.." class="form-control" id="city-input"
+                                autocomplete="off" />
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" value="search" class="btn btn-primary w-100" />
+
+                        </div>
+                    </div>
+                </form>
+                <div class="overview">
+
+                    <h1 id="city"></h1>
+                    <ul>
+                        <li> Last updated: <span id="date"></span></li>
+                        <li id="description"></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="clearfix weather-temperature">
+                            <img src="" alt="Sunny" id="icon" class="float-left">
+                            <div class="float-left">
+                                <strong id="temperature"></strong><span class="units">
+                                    °C</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li>
+                                Humidity: %<span id="humidity"></span>
+                            </li>
+                            <li>
+                                Wind: 27km/h <span id="wind"></span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="wearther-forecast" id="forecast">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="weather-forecast-date">
+                                Stu
+                            </div>
+                            <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" width="36" />
+                            <div class="weather-forecast-temperatures">
+                                <span class="weather-forecast-temperature-mix">
+                                    18°</span>
+
+                                <span class="weather-forecast-temperature-min">
+                                    12° </span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <small>
+                <a href="https://github.com/Gloria-28/HM-WK7" target="_black"> Open-Source Code</a>
+                By Gloria Abera
+
+            </small>
+        </div>
+    </div>
+    <script src="src/script.js"></script>
+</body>
+
+</html>
