@@ -1,7 +1,3 @@
-
-
-
-
 function formatDate(timestamp){
    let date = new Date(timestamp);
    let hours = date.getHours();
@@ -33,7 +29,6 @@ function formatDay(timestamp){
 
     return days[day];
 }
-
 function displayForecast(response){
    let forecast = response.data.daily;
     let forecastElement = document.querySelector("#forecast");
@@ -69,6 +64,15 @@ if (index < 6){
     forecastElement.innerHTML = forecastHTML; 
 }
 
+function getForecast(coordinates) {
+    console.log(coordinates);
+    let apiKey="11af10924b44b47f1b1d52623ef2ad0b";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    console.log(apiUrl);
+    axios.get(apiUrl).then(displayForecast);
+    
+}
+
 function displayTemperature(response) {
     
    console.log(response);
@@ -95,6 +99,7 @@ iconElement.setAttribute("alt", response.data.weather[0].description);
 getForecast(response.data.coord);
 }
 
+
 function search(city){
 
 let apiKey="11af10924b44b47f1b1d52623ef2ad0b";
@@ -118,5 +123,4 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 
-search("New York")
-
+search("Toronto")
